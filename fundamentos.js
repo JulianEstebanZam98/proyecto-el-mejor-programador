@@ -41,6 +41,12 @@ for (let i = 0; i < persona.habilidades.length; i++) {
   console.log("Habilidades " + (i + 1) + " // " + persona.habilidades[i]);
 }
 
+// Usando forEach
+let numerillos = [6, 7, 8, 9, 10, 11];
+numerillos.forEach((numero, index) => {
+  console.log("Numerillos " + (index + 1) + ": " + numero);
+});
+
 // Usando un bucle while para contar habilidades
 let contador = 0;
 
@@ -62,7 +68,7 @@ function presentarPersona(persona) {
     persona.edad +
     " años" +
     " y tengo habilidades en " +
-    persona.habilidades
+    persona.habilidades.join(", ")
   );
 }
 console.log(presentarPersona(persona));
@@ -81,7 +87,7 @@ if (persona.esDesarrollador && persona.edad >= 18) {
   );
 }
 
-if (persona.esDesarrolladora || persona.edad < 18) {
+if (persona.esDesarrollador || persona.edad < 18) {
   console.log(
     persona.nombre +
       " " +
@@ -97,7 +103,7 @@ if (persona.esDesarrolladora || persona.edad < 18) {
   );
 }
 
-if (!persona.esDesarrolladora) {
+if (!persona.esDesarrollador) {
   console.log(
     persona.nombre + " " + persona.apellido + " no es desarrollador."
   );
@@ -105,7 +111,7 @@ if (!persona.esDesarrolladora) {
   console.log(persona.nombre + " " + persona.apellido + " es desarrollador.");
 }
 
-//Ejemplo mezclando todo lo visto anteriormente
+//Ejemplos mezclando todo lo visto anteriormente
 
 let libro = {
   titulo: "Practicando programación desde cero",
@@ -161,3 +167,22 @@ for (let i = 1; i <= 20; i++) {
     console.log(i + " no es par.");
   }
 }
+
+function sumaNumeros(array) {
+  let suma = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    suma += array[i];
+  }
+  return suma;
+}
+
+let numeritos = [1, 2, 3, 4, 5, 6];
+console.log(sumaNumeros(numeritos));
+
+// Usando reduce para sumar todos los números
+let numerotes = [1, 2, 3, 4, 5, 6];
+let sumita = numerotes.reduce((acumulador, numeroActual) => {
+  return acumulador + numeroActual;
+}, 0);
+console.log("La suma total es: " + sumita);
