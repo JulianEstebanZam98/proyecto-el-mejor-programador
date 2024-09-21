@@ -116,7 +116,7 @@ if (!persona.esDesarrollador) {
 let libro = {
   titulo: "Practicando programación desde cero",
   autor: "Julián Zambrano",
-  añoDePublicación: 2024,
+  añoDePublicacion: 2024,
   disponible: true,
 };
 
