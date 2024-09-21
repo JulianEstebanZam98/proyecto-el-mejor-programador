@@ -1,5 +1,5 @@
 // Ejercicio 1: Crear un array de 5 números y usar un bucle for para imprimir cada número.
-let numeros = [5, 10, 15, 20, 25, 30];
+let numeros = [5, 10, 15, 20, 25, 26, 30, 35];
 
 for (let i = 0; i < numeros.length; i++) {
   console.log("Número " + (i + 1) + ": " + numeros[i]);
@@ -10,14 +10,14 @@ function saludar(nombre, edad) {
   return "Hola, " + nombre + " , tienes " + edad + " años.";
 }
 
-console.log(saludar("Andrea", 25));
-console.log(saludar("Julián", 30));
+console.log(saludar("Andrea", 26));
+console.log(saludar("Julián", 25));
 
 // Definimos un objeto que representa a una persona
 let persona = {
   nombre: "Julián",
   apellido: "Zambrano",
-  edad: 30,
+  edad: 25,
   esDesarrollador: true,
   habilidades: ["JavaScript", "React", "Node.js", "Express.js", "TypeScript"],
 };
@@ -46,9 +46,23 @@ let contador = 0;
 
 while (contador < persona.habilidades.length) {
   console.log(
-    "Habilidades " + (contador + 1) + " => " + persona.habilidades[contador]
+    "Habilidad " + (contador + 1) + " => " + persona.habilidades[contador]
   );
   contador++;
 }
 
 //Vamos a crear una función que acepte un objeto persona y devuelva un mensaje personalizado.
+function presentarPersona(persona) {
+  return (
+    "Hola, mi nombre es " +
+    persona.nombre +
+    " " +
+    persona.apellido +
+    " y tengo " +
+    persona.edad +
+    " años" +
+    " y tengo habilidades en " +
+    persona.habilidades
+  );
+}
+console.log(presentarPersona(persona));
