@@ -66,3 +66,98 @@ function presentarPersona(persona) {
   );
 }
 console.log(presentarPersona(persona));
+
+//Vamos a usar operadores lógicos &&, ||, ! (and, or, not)
+if (persona.esDesarrollador && persona.edad >= 18) {
+  console.log(
+    persona.nombre +
+      " " +
+      persona.apellido +
+      " es desarrollador y mayor de edad"
+  );
+} else {
+  console.log(
+    persona.nombre + " " + persona.apellido + " no cumple con los criterios"
+  );
+}
+
+if (persona.esDesarrolladora || persona.edad < 18) {
+  console.log(
+    persona.nombre +
+      " " +
+      persona.apellido +
+      " es desarrollador o es menor de edad."
+  );
+} else {
+  console.log(
+    persona.nombre +
+      " " +
+      persona.apellido +
+      " es mayor de edad y no es desarrollador."
+  );
+}
+
+if (!persona.esDesarrolladora) {
+  console.log(
+    persona.nombre + " " + persona.apellido + " no es desarrollador."
+  );
+} else {
+  console.log(persona.nombre + " " + persona.apellido + " es desarrollador.");
+}
+
+//Ejemplo mezclando todo lo visto anteriormente
+
+let libro = {
+  titulo: "Practicando programación desde cero",
+  autor: "Julián Zambrano",
+  añoDePublicación: 2024,
+  disponible: true,
+};
+
+if (libro.disponible) {
+  console.log(
+    libro.titulo +
+      " del autor " +
+      libro.autor +
+      " publicado en el año " +
+      libro.añoDePublicación +
+      " está disponible."
+  );
+} else {
+  console.log(
+    libro.titulo +
+      " del autor " +
+      libro.autor +
+      " publicado en el año " +
+      libro.añoDePublicación +
+      " no está disponible."
+  );
+}
+
+if (libro.disponible) {
+  console.log(
+    libro.titulo +
+      " del autor " +
+      libro.autor +
+      " publicado en el año " +
+      libro.añoDePublicación +
+      " no está disponible."
+  );
+} else {
+  console.log(
+    !libro.titulo +
+      " del autor " +
+      libro.autor +
+      " publicado en el año " +
+      libro.añoDePublicación +
+      " está disponible."
+  );
+}
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " es número par.");
+  } else {
+    console.log(i + " no es par.");
+  }
+}
